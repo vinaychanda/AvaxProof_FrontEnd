@@ -9,11 +9,11 @@ const hre = require("hardhat");
 async function main() {
   
 
-  const newContract = await hre.ethers.getContractFactory("NewContract");
-  const newcontract= await newContract.deploy();
+  const TodoList = await hre.ethers.getContractFactory("TodoList");
+  const todoList= await TodoList.deploy();
 
-  await newcontract.deployed();
-  console.log("contract deployed to :",newcontract.address);
+  await todoList.deployed();
+  console.log("contract deployed to :",todoList.address);
   // 0x5FbDB2315678afecb367f032d93F642f64180aa3
 
 
